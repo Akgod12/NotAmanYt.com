@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NotAmanYT - Minecraft Mods & Packs</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: #e5e5e5;
+    }
+    header {
+      background: #1a1a1a;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      color: #26ff91;
+      text-shadow: 0 0 10px #26ff91, 0 0 20px #00ffcc;
+      animation: flicker 1.5s infinite alternate;
+    }
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.9; }
+      100% { opacity: 1; }
+    }
+    header p {
+      font-size: 1.2em;
+      color: #bbbbbb;
+    }
+    nav {
+      background: #141414;
+      text-align: center;
+      padding: 15px 0;
+    }
+    nav a, nav button {
+      color: #26ff91;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.05em;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    nav button:hover, nav a:hover {
+      color: #00c3ff;
+    }
+    .content {
+      padding: 30px 20px;
+      animation: fadeIn 1.2s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h2 {
+      color: #26ff91;
+      border-left: 5px solid #ff5e57;
+      padding-left: 10px;
+      margin-top: 40px;
+    }
+    .download, .discord-section {
+      background: #1b1b1b;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .download a, .discord-link {
+      color: #00c3ff;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .discord-section {
+      border-left: 5px solid #7289da;
+      text-align: center;
+    }
+    .discord-section h2 {
+      color: #7289da;
+    }
+    .discord-link {
+      background: #5865F2;
+      padding: 12px 25px;
+      border-radius: 5px;
+      color: white;
+    }
+    .youtube-section iframe {
+      width: 100%;
+      height: 315px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    .subscriber-counter {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .subscriber-counter iframe {
+      width: 100%;
+      max-width: 400px;
+      height: 100px;
+      border: none;
+      border-radius: 10px;
+      background: #1a1a1a;
+    }
+    .social-links {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .social-links a {
+      display: inline-block;
+      margin: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #ff5e57;
+    }
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #26ff91;
+      color: #000;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 0 10px #26ff91;
+    }
+    footer {
+      background: #141414;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #999;
+    }
+    .emoji {
+      font-size: 1.2em;
+    }
+    .light-theme {
+      background: #f9f9f9;
+      color: #111;
+    }
+    .light-theme nav {
+      background: #e0e0e0;
+    }
+    .light-theme nav a, .light-theme nav button {
+      color: #111;
+    }
+    .light-theme .download,
+    .light-theme .discord-section {
+      background: #eeeeee;
+      color: #000;
+    }
+    .light-theme footer {
+      background: #ccc;
+      color: #111;
+    }
+    @media (max-width: 768px) {
+      nav a, nav button {
+        display: block;
+        margin: 8px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>NotAmanYT</h1>
+  <p>Your One-Stop Spot for Minecraft Mods, Packs & Pure Creativity!</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#Information">Education</a>
+  <a href="#minecraft">Minecraft Info</a>
+  <a href="#discord">Discord</a>
+  <a href="#youtube">YouTube</a>
+  <a href="#downloads">Downloads</a>
+  <button id="themeToggle" onclick="toggleTheme()">Light Mode</button>
+</nav>
+
+<div class="content">
+  <section id="about">
+    <h2>Who Am I? 🎮</h2>
+    <p>I am NotAmanYT — Minecraft creator from India. I make cool texture packs, mods, and tutorials just for you!</p>
+  </section>
+
+  <section id="Information">
+    <h2>My Learning Journey 📚</h2>
+    <p>I started everything myself. No team, no coding crew. Just me, a dream, and Minecraft.</p>
+  </section>
+
+  <section id="minecraft">
+    <h2>Minecraft Info 🌍</h2>
+    <p>Minecraft is a 3D sandbox game full of blocks, creativity, survival and endless fun.</p>
+  </section>
+
+  <section id="discord" class="discord-section">
+    <h2>Join My Discord 💬</h2>
+    <p>Hang out with other Minecraft fans and chat with me directly!</p>
+    <a class="discord-link" href="https://discord.gg/q5mudMPgxs" target="_blank">Join Now 🚀</a>
+  </section>
+
+  <section id="youtube">
+    <h2>Latest Video ▶️</h2>
+    <p>Watch my latest mod video and subscribe to <strong>@NotAmanYTOP</strong>!</p>
+    <div class="youtube-section">
+      <iframe src="https://www.youtube.com/embed/opWYK2eQBeg" allowfullscreen></iframe>
+    </div>
+
+    <div class="subscriber-counter">
+      <h3>Subscribers 📊</h3>
+      <iframe src="https://yt.subscribercount.live/embed/@NotAmanYTOP"></iframe>
+    </div>
+
+    <p style="text-align:center;">
+      <a href="https://youtube.com/@notamanytop" target="_blank" style="color:#26ff91; font-weight:bold;">Visit Channel ꧁•⊹٭ N҉o҉t҉A҉m҉a҉n҉Y҉T҉ ٭⊹•꧂ 🔗</a>
+    </p>
+  </section>
+
+  <section id="downloads">
+    <h2>Downloads ⬇️</h2>
+    <div class="download">
+      <h3>Durability Viewer Mod</h3>
+      <p>Track item durability in real-time. For Minecraft Java 1.20.1</p>
+      <a href="https://www.mediafire.com/file/n349cmqz53tso5i/durabilityviewer-1.20.1-1.10.4.jar/file" target="_blank">Download</a>
+    </div>
+    <div class="download">
+      <h3>16x Texture Pack</h3>
+      <p>Clean, fast visuals compatible from 1.18 - 1.21.70+</p>
+      <a href="https://linkpays.in/VAJzEip6" target="_blank">Get Texture Pack</a>
+    </div>
+  </section>
+
+  <div class="social-links">
+    <a href="https://www.instagram.com/notamanytop" target="_blank">Follow me on Instagram 📸</a>
+  </div>
+</div>
+
+<button id="backToTop" onclick="scrollToTop()">↑ Top</button>
+
+<footer>
+  &copy; 2025 NotAmanYT. All rights reserved. | Stay Blocky 🧱<br>
+  Instagram: <a href="https://www.instagram.com/notamanytop" target="_blank" style="color:#ff5e57;">@notamanytop</a>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById("themeToggle");
+  let isDark = true;
+  function toggleTheme() {
+    document.body.classList.toggle("light-theme");
+    isDark = !isDark;
+    toggleBtn.textContent = isDark ? "Light Mode" : "Dark Mode";
+    toggleBtn.style.background = isDark ? "#ff5e57" : "#333";
+  }
+
+  const btn = document.getElementById('backToTop');
+  window.onscroll = function () {
+    btn.style.display = window.scrollY > 200 ? "block" : "none";
+  };
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+</body>
+</html>
